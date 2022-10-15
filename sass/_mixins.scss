@@ -1,0 +1,76 @@
+@use "./variables" as *;
+
+@mixin title($col: $main-text-color) {
+    font-family: 'Ultra', serif;
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 64px;
+    color: $col;
+}
+
+@mixin sub-title($col: $main-text-color) {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 3px;
+    color: $col;
+}
+
+@mixin description-text($col: $sub-text-color) {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: $col;
+}
+
+@mixin text-button($col: $main-text-color) {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: $col;
+}
+
+@mixin font($fam, $size, $line) {
+    font-family: $fam;
+    font-weight: 400;
+    font-size: $size;
+    line-height: $line;
+}
+
+@mixin image($url) {
+    background-image: url('$url');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin icon($col) {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: $col;
+}
+
+@mixin wrapper($width) {
+    margin-left: auto;
+    margin-right: auto;
+    width: $width;
+}
+
+@mixin paddingX($x) {
+    padding-left: $x;
+    padding-right: $x;
+}
+
+@mixin paddingY($y) {
+    padding-top: $y;
+    padding-bottom: $y;
+}
+
+@mixin paingXY($x, $y) {
+    @include paddingX($x);
+    @include paddingY($y);
+}
