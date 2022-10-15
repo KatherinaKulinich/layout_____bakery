@@ -6,6 +6,7 @@
     font-size: 56px;
     line-height: 64px;
     color: $col;
+    @include marginY0();
 }
 
 @mixin sub-title($col: $main-text-color) {
@@ -15,6 +16,8 @@
     line-height: 32px;
     letter-spacing: 3px;
     color: $col;
+    text-transform: uppercase;
+    @include marginY0();
 }
 
 @mixin description-text($col: $sub-text-color) {
@@ -41,7 +44,7 @@
 }
 
 @mixin image($url) {
-    background-image: url('$url');
+    background-image: url($url);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -78,4 +81,9 @@
 @mixin paddingXY($x, $y) {
     @include paddingX($x);
     @include paddingY($y);
+}
+
+@mixin marginY0 {
+    margin-top: 0;
+    margin-bottom: 0;
 }

@@ -1,0 +1,66 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.slogan {
+    display: flex;
+
+    &__card {
+        // padding: 160px 120px 241px 135px;
+        padding-top: 160px;
+        padding-bottom: 240px;
+        width: 50%;
+        background-color: rgba(231, 212, 190, 0.44);
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 470px;
+    }
+
+    &__picture {
+        @include image('../images/people/cooker-1.jpg');
+        width: 50%;
+        height: 790px;
+    }
+
+    &__subtitle {
+        @include sub-title;
+    }
+
+    &__title {
+        @include font($ff-ultra, 72px, 80px);
+        color: #000000;
+        @include marginY0;
+        position: relative;
+    }
+
+    &__description {
+        @include font($ff-sans, 20px, 32px);
+        color: #000000;
+        @include marginY0;
+    }
+
+    &__background-pic {
+        @include image('../images/background/wheat.png');
+        width: 134px;
+        height: 276px;
+        position: absolute;
+        z-index: 10;
+        // transform: rotate(30deg);
+    }
+
+    &__dots {
+        @include image('../images/background/dark-dots-2.png');
+        width: 65px;
+        height: 56px;
+        position: absolute;
+        z-index: 10;
+        top: -30px;
+        right: 130px;
+    }
+}

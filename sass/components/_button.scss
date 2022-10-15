@@ -13,5 +13,11 @@
         background-color: #000000;
         border-color: rgba(255, 255, 255, 0.3);
     }
+
+    &--light {
+        @include text-button;
+        border-color: rgba(23, 27, 27, 0.24);
+        background-color: #FFFFFF;
+    }
 }
 
