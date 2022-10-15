@@ -1,0 +1,16 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.logo {
+    @include font($ff-ultra, 40px, 48px);
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &--dark {
+            color: #000000;
+        }
+
+        &--light {
+            color: #FFFFFF;
+        }
+}

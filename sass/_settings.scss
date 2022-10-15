@@ -1,0 +1,15 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.wrapper {
+
+    &--main {
+        @include wrapper(1440px);
+    }
+
+    &--header {
+        @include wrapper(1170px);
+    }
+    
+}
+

@@ -28,4 +28,4 @@ gulp.task('clean', () => {
 
 
 gulp.watch("./sass/**/*.scss", gulp.series("css"));
-gulp.task("start", gulp.series("clean","pug", "css"));
+gulp.task("start", gulp.series("clean", "css"));

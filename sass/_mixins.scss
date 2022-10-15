@@ -70,7 +70,12 @@
     padding-bottom: $y;
 }
 
-@mixin paingXY($x, $y) {
+@mixin paddingYY($top, $bottom) {
+    padding-top: $top;
+    padding-bottom: $bottom;
+}
+
+@mixin paddingXY($x, $y) {
     @include paddingX($x);
     @include paddingY($y);
 }

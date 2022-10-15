@@ -1,0 +1,28 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.header {
+    @include paddingYY(16px, 25px);
+    
+    &__section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 72px;
+        align-items: center;
+    }
+
+    &__navigation {
+        display: flex;
+        gap: 60px;
+    }
+
+    &__nav-item {
+        @include description-text(#000000);
+        text-decoration: none;
+    }
+}

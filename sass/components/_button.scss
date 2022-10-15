@@ -1,0 +1,17 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.button {
+    text-decoration: none;
+    text-transform: uppercase;
+    @include paddingXY(42px, 12px);
+    border: 1px;
+    border-radius: 2px;
+
+    &--dark {
+        @include text-button(#FFFFFF);
+        background-color: #000000;
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+}
+
