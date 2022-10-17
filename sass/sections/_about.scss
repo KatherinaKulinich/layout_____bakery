@@ -1,0 +1,85 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.about {
+    @include paddingYY(160px, 120px);
+    display: flex;
+
+    &__illustration {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    &__information {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    &__main-picture {
+        width: 400px;
+        height: 400px;
+        z-index: 50;
+        border-radius: 10px;
+    }
+
+    &__sub-picture {
+        width: 370px;
+        height: 304px;
+        position: absolute;
+        top: -40px;
+        left: 100px;
+        z-index: 30;
+    }
+
+    &__dots1 {
+        @include image('../images/background/dark-dots-1.png');
+        width: 154px;
+        height: 134px;
+        position: absolute;
+        top: 50px;
+        right: 90px;
+        transform: rotate(30deg);
+        z-index: 20;
+    }
+
+    &__dots2 {
+        @include image('../images/background/dark-dots-2.png');
+        width: 100px;
+        height: 88px;
+        position: absolute;
+        bottom: 220px;
+        left: 60px;
+        transform: rotate(180deg);
+        z-index: 20;
+    }
+
+    &__figure {
+        @include image('../images/background/fill-abstract.png');
+        width: 495px;
+        height: 499px;
+        position: absolute;
+        z-index: 10;
+        top: 90px;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 570px;
+    }
+
+    &__subtitle {
+        @include  sub-title;
+    }
+
+    &__title {
+        @include title;
+    }
+}

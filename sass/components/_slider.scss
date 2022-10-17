@@ -1,0 +1,60 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.slider {
+    display: flex;
+    gap: 52px;
+
+    &__switch {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 50px;
+    }
+
+    &__button {
+        width: 48px;
+        height: 48px;
+        border: none;
+        border-radius: 50%;
+        background-color: $main-text-color;
+
+        &:hover {
+            background-color: rgba(51, 51, 51, 0.9);
+        }
+    }
+
+    &__content {
+        width: 370px;
+    }
+
+    &__number {
+        @include sub-title;
+        margin-bottom: 12px;
+    }
+
+    &__title {
+        @include font($ff-oswald, 24px, 32px);
+        color: $main-text-color;
+        margin-top: 0;
+        margin-bottom: 22px;
+    }
+
+    &__decsription {
+        @include description-text(rgba(51, 51, 51, 0.5));
+        margin-bottom: 35px;
+        margin-top: 0;
+    }
+
+    &__next {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    &__next-title {
+        @include marginY0;
+        @include font($ff-sans, 16px, 32px);
+        color: $main-text-color;
+    }
+}

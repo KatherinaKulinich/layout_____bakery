@@ -3,11 +3,12 @@
 
 @import "./normalize";
 @import "./fonts.scss";
-
 @import "./settings";
 
 @import "./components/button";
 @import "./components/logo";
+@import "./components/slider";
 
 @import "./sections/header";
 @import "./sections/slogan";
+@import "./sections/about";

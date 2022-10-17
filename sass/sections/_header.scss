@@ -24,5 +24,11 @@
     &__nav-item {
         @include description-text(#000000);
         text-decoration: none;
+        padding-bottom: 3px;
+        border-bottom: 1px solid transparent;
+
+        &:hover {
+            border-color: $main-text-color;
+        }
     }
 }
