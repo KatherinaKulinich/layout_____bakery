@@ -1,0 +1,23 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.features {
+    @include paddingYY(100px, 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__subtitle {
+        @include sub-title;
+        margin-bottom: 18px;
+    }
+
+    &__title {
+        @include title;
+        margin-bottom: 70px;
+    }
+
+    &__cards {
+        display: flex;
+    }
+}

@@ -1,0 +1,50 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.features-card {
+    padding: 56px 30px 48px 64px;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+
+    &:hover .features-card__icon path {
+        fill: #FFFFFF; 
+    }
+
+    &:hover .features-card__hover-img {
+        display: block;;
+    }
+
+    &__icon {
+        margin-bottom: 55px;
+    }
+
+    &__title {
+        @include font($ff-ultra, 40px, 48px);
+        color: $main-text-color;
+        margin-top: 0;
+        margin-bottom: 18px;
+    }
+
+    &__description {
+        @include font($ff-sans, 16px, 32px);
+        color: rgba(51, 51, 51, 0.5);
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 306px;
+    }
+
+    &__hover-img {
+        @include image ('../images/picture-3.jpg');
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        position: absolute;
+        right: -37px;
+        top: -30px;
+        display: none;
+    }
+}
