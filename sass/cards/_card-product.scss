@@ -1,0 +1,58 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.card-product {
+    width: 370px;
+
+    &__picture {
+        width: 370px;
+        height: 304px;
+
+        &--bread {
+            @include image ('../images/picture-6.jpg');
+        }
+
+        &--cupcake {
+            @include image ('../images/picture-7.jpg');
+        }
+
+        &--biscuits {
+            @include image ('../images/picture-5.2.jpg');
+        }
+
+        &--brioche {
+            @include image ('../images/picture-8.jpg');
+        }
+    }
+
+    &__content {
+        padding: 25px 32px 35px 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    &__category {
+        @include sub-title;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__name {
+        @include font ($ff-oswald, 24px, 32px);
+        color: $main-text-color;
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    &__price {
+        @include font ($ff-ultra, 40px, 48px);
+        color: $main-text-color;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

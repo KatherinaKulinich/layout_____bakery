@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="./css/style.min.css">
     <title>Bakery</title>
 </head>
-<body>
-    <header class="header">
-        <div class="wrapper wrapper--header">
+<body class="body">
+    <header class="body__header header">
+        <div class="wrapper wrapper--secondary">
             <div class="header__section">
                 <div class="header__menu">
                     <a href="" class="logo logo--dark">
@@ -133,7 +133,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="body__features-section">
             <div class="wrapper wrapper--main">
                 <div class="features">
                     <p class="features__subtitle">
@@ -214,109 +214,148 @@
                         </div>
                     </div>
                 </div>
-                <div>
-                    <p>
-                        Our Video
-                    </p>
-                    <h3>
-                        Story Behind Every Piece
-                    </h3>
-                    <button type="button">
-                        <img src="./images/svg/triangle.svg" alt="start-video">
-                    </button>
-                    <div></div>
+                <div class="process-video">
+                    <video  
+                        poster="./images/poster2.jpg" 
+                        width="1440" 
+                        height="480" 
+                        class="process-video__poster"
+                    >
+                        <source src="./images/video.mp4" type="video/mp4">
+                    </video>
+                    <div class="process-video__content">
+                        <button type="button" class="process-video__button">
+                            <svg 
+                                width="25" 
+                                height="31" 
+                                viewBox="0 0 25 31" 
+                                fill="none"
+                            >
+                                <path 
+                                    d="M24.2496 15.4231L0.249634 30.4231L0.249634 0.423096L24.2496 15.4231Z" 
+                                    fill="#F5AE5C"
+                                />
+                            </svg>
+                        </button>
+                        <div class="process-video__name">
+                            <p class="process-video__subtitle">
+                                Our Video
+                            </p>
+                            <h3 class="process-video__title">
+                                Story Behind Every Piece
+                            </h3>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <section>
-            <div>
-                <div id="products">
-                    <p>
+        <section class="boy__products">
+            <div class="wrapper wrapper--secondary">
+                <div 
+                    id="products" 
+                    class="products"
+                >
+                    <p class="products__subtitle">
                         Our Products
                     </p>
-                    <h2>
+                    <h2 class="products__title">
                         Baked Fresh Every Morning
                     </h2>
-                    <div>
-                        <p>
-                            Bakery
-                        </p>
-                        <h4>
-                            Homemade Bread
-                        </h4>
-                        <div>
-                            <p>
-                                Flows by their place and supplies it with the necessary regelialia.
-                            </p>
-                            <p>
-                                $9
-                            </p>
+                    <div class="products__cards">
+                        <div class="products__main-card">
+                            <div class="products__content">
+                                <p class="products__card-category">
+                                    Bakery
+                                </p>
+                                <h4 class="products__card-title">
+                                    Homemade Bread
+                                </h4>
+                                <div class="products__card-info">
+                                    <p class="products__card-desc">
+                                        Flows by their place and supplies it with the necessary regelialia.
+                                    </p>
+                                    <p class="products__card-price">
+                                        $9
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card products__card--bread card-product">
+                            <div class="card-product__picture card-product__picture--bread"></div>
+                            <div class="card-product__content">
+                                <p class="card-product__category">
+                                    Bakery
+                                </p>
+                                <div class="card-product__info">
+                                    <p class="card-product__name">
+                                        Bread
+                                    </p>
+                                    <p class="card-product__price">
+                                        $5
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card products__card--cupcake card-product">
+                            <div class="card-product__picture card-product__picture--cupcake"></div>
+                            <div class="card-product__content">
+                                <p class="card-product__category">
+                                    Pastry
+                                </p>
+                                <div class="card-product__info">
+                                    <p class="card-product__name">
+                                        Cupcake
+                                    </p>
+                                    <p class="card-product__price">
+                                        $3
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card products__card--biscuits card-product">
+                            <div class="card-product__picture card-product__picture--biscuits"></div>
+                            <div class="card-product__content">
+                                <p class="card-product__category">
+                                    Sweet
+                                </p>
+                                <div class="card-product__info">
+                                    <p class="card-product__name">
+                                        Biscuits
+                                    </p>
+                                    <p class="card-product__price">
+                                        $2
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="products__card products__card--brioche card-product">
+                            <div class="card-product__picture card-product__picture--brioche"></div>
+                            <div class="card-product__content">
+                                <p class="card-product__category">
+                                    Pastry
+                                </p>
+                                <div class="card-product__info">
+                                    <p class="card-product__name">
+                                        Brioche
+                                    </p>
+                                    <p class="card-product__price">
+                                        $5
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <div></div>
-                        <p>
-                            Bakery
-                        </p>
-                        <div>
-                            <p>
-                                Bread
-                            </p>
-                            <p>
-                                $5
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div></div>
-                        <p>
-                            Pastry
-                        </p>
-                        <div>
-                            <p>
-                                Cupcake
-                            </p>
-                            <p>
-                                $3
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div></div>
-                        <p>
-                            Sweet
-                        </p>
-                        <div>
-                            <p>
-                                Biscuits
-                            </p>
-                            <p>
-                                $2
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div></div>
-                        <p>
-                            Pastry
-                        </p>
-                        <div>
-                            <p>
-                                Brioche
-                            </p>
-                            <p>
-                                $5
-                            </p>
-                        </div>
-                    </div>
-                    <a href="">
+                    <a 
+                        href="" 
+                        class="button button--light products__button"
+                    >
                         Explore
                     </a>
                 </div>
             </div>
         </section>
-        <section>
-            <div>
+        <section class="body__process">
+            <div class="wrapper wrapper--secondary">
                 <div>
                     <p>
                         Our Process

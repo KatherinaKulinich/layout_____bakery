@@ -5,13 +5,12 @@
     text-decoration: none;
     text-transform: uppercase;
     @include paddingXY(42px, 12px);
-    border: 1px;
     border-radius: 2px;
 
     &--dark {
         @include text-button(#FFFFFF);
         background-color: #000000;
-        border-color: rgba(255, 255, 255, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.3);
 
         &:hover {
             color: $hover-color;
@@ -21,11 +20,12 @@
 
     &--light {
         @include text-button;
-        border-color: rgba(23, 27, 27, 0.24);
         background-color: #FFFFFF;
+        border: 1px solid rgba(23, 27, 27, 0.24);
 
         &:hover {
             background-color: $hover-color;
+            color: #FFFFFF;
         }
     }
 }

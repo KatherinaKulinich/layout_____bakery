@@ -1,0 +1,55 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.process-video {
+    position: relative;
+
+    &__content {
+        display: flex;
+        gap: 286px;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    // &__poster {
+    //     background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
+
+    // }
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 475px;
+    }
+
+    &__subtitle {
+        @include sub-title(#FFFFFF);
+    }
+
+    &__title {
+        @include title(#FFFFFF);
+    }
+
+    &__button {
+        width: 160px;
+        height: 160px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: none;
+        background-color: #FFFFFF;
+
+        &:hover {
+            background-color: $hover-color;
+        }
+
+        &:hover path {
+            fill: #FFFFFF;
+        }
+    }
+}

@@ -4,14 +4,18 @@
 @import "./normalize";
 @import "./fonts.scss";
 @import "./settings";
+@import "./body";
 
 @import "./components/button";
 @import "./components/logo";
 @import "./components/slider";
 
 @import "./cards/features-card";
+@import "./cards/card-product";
 
 @import "./sections/header";
 @import "./sections/slogan";
 @import "./sections/about";
 @import "./sections/features";
+@import "./sections/products";
+@import "./sections/process-video";

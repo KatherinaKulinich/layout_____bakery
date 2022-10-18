@@ -1,0 +1,13 @@
+@use "./variables" as *;
+
+.body {
+    &__header,
+    &__features-section,
+    &__products {
+        background-color: #FFFFFF;
+    }
+
+    &__process {
+        background-color: $main-text-color;
+    }
+}
