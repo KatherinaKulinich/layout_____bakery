@@ -6,6 +6,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    
 
     &__subtitle {
         @include sub-title(#FFFFFF);
@@ -19,9 +21,31 @@
 
     &__cards {
         display: flex;
+        z-index: 30;
     }
 
     &__card-item {
         width: 25%;
+    }
+
+    
+    &__dots {
+        @include image ('../images/background/light-dots.png');
+        position: absolute;
+        width: 154px;
+        height: 134px;
+        z-index: 20;
+        top: -20px;
+        left: 30px;
+    }
+
+    &__abstract {
+        @include image ('../images/background/abstract-light.png');
+        position: absolute;
+        width: 278px;
+        height: 211px;
+        z-index: 20;
+        top: -40px;
+        left: 0;
     }
 }
