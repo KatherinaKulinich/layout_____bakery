@@ -1,0 +1,45 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.card-process {
+    padding: 41px 47px 56px 33px;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        background-color: $hover-color;
+    }
+
+    &:hover .card-process__hover-img {
+        display: block;
+    }
+
+    &__numb {
+        @include sub-title;
+        margin-bottom: 96px;
+    }
+
+    &__name {
+        @include font ($ff-ultra, 40px, 48px);
+        margin-top: 0;
+        margin-bottom: 18px;
+    }
+
+    &__description {
+        @include description-text;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__hover-img {
+        @include image ('../images/picrure-1.jpg');
+        position: absolute;
+        border-radius: 50%;
+        width: 158px;
+        height: 147px;
+        top: -25px;
+        right: -14px;
+        display: none;
+    }
+}
