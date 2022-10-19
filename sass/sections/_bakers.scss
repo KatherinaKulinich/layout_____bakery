@@ -1,0 +1,60 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.bakers {
+    @include paddingYY(192px, 133px);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &__content {
+        width: 50%;
+    }
+
+    &__subtitle {
+        @include sub-title;
+        margin-bottom: 18px;
+    }
+
+    &__title {
+        @include title;
+        margin-bottom: 70px;
+    }
+
+    &__picture {
+        z-index: 40;
+    }
+
+    &__dots {
+        @include image ('../images/background/dark-dots-2.png');
+        width: 124px;
+        height: 104px;
+        transform: rotate(-45deg);
+        position: absolute;
+        z-index: 30;
+        top: 430px;
+        right: 450px
+    }
+
+    &__figure {
+        @include image ('../images/background/fill-abstract.png');
+        width: 482px;
+        height: 489px;
+        transform: rotate(-105deg);
+        position: absolute;
+        z-index: 20;
+        bottom: 80px;
+        right: 20px;
+    }
+
+    &__line {
+        @include image ('../images/background/abstract-light.png');
+        width: 278px;
+        height: 211px;
+        position: absolute;
+        z-index: 20;
+        top: 130px;
+        right: 0;
+    }
+
+}
