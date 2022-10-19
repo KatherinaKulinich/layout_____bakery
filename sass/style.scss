@@ -9,11 +9,13 @@
 @import "./components/button";
 @import "./components/logo";
 @import "./components/slider";
+@import "./components/carousel";
 
 @import "./cards/features-card";
 @import "./cards/card-product";
 @import "./cards/card-process";
 @import "./cards/card-recipe";
+@import "./cards/card-feedback";
 
 @import "./sections/header";
 @import "./sections/slogan";
@@ -24,3 +26,4 @@
 @import "./sections/process";
 @import "./sections/recipes";
 @import "./sections/bakers";
+@import "./sections/feedback";
