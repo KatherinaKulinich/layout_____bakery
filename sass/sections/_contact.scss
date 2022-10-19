@@ -1,0 +1,118 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.contact {
+    @include paddingYY(100px, 200px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+    &__content {
+        width: 50%;
+    }
+
+    &__subtitle {
+        @include sub-title;
+        margin-bottom: 18px;
+    }
+
+    &__title {
+        @include title;
+        margin-bottom: 70px;
+        width: 287px;
+    }
+
+    &__cards {
+        display: flex;
+        gap: 59px;
+        align-items: flex-start;
+        margin-bottom: 61px;
+    }
+
+    &__card-item {
+        display: flex;
+        gap: 52px;
+        align-items: center;
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        border: none;
+        border-radius: 50%;
+        background-color: $main-text-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__number {
+        @include sub-title;
+        margin-bottom: 12px;
+    }
+
+    &__name {
+        @include font ($ff-oswald, 24px, 32px);
+        margin-top: 0;
+        color: $main-text-color;
+        margin-bottom: 22px;
+    }
+
+    &__address {
+        @include description-text;
+        @include marginY0;
+        width: 141px;
+    }
+
+    &__tel {
+        @include description-text($main-text-color);
+        @include marginY0;
+        text-decoration: none;
+    }
+
+    &__button {
+        margin-left: 100px;
+    }
+
+    &__picture {
+        width: 460px;
+        height: 625px;
+    }
+
+    &__picture-section {
+        z-index: 40;
+    }
+
+    &__figure {
+        @include image ('../images/background/fill-abstract.png');
+        width: 482px;
+        height: 489px;
+        position: absolute;
+        z-index: 20;
+        left: 40px;
+        bottom: 210px
+
+    }
+
+    &__line {
+        @include image ('../images/background/abstract-light.png');
+        width: 278px;
+        height: 211px;
+        position: absolute;
+        z-index: 20;
+        top: 30px;
+        left: 50px;
+    }
+
+    &__dots {
+        @include image ('../images/background/dark-dots-2.png');
+        width: 124px;
+        height: 104px;
+        transform: rotate(-45deg);
+        position: absolute;
+        z-index: 30;
+        top: 200px;
+        left: 400px;
+    }
+}

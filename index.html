@@ -909,60 +909,71 @@
                         <button type="button" class="carousel__button"></button>
                     </div>
                 </div>
-                <div>
-                    <div>
-                        <img src="./images/picture-2.jpg" alt="baguette">
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                <div class="contact">
+                    <div class="contact__picture-section">
+                        <img 
+                            src="./images/picture-2.jpg" 
+                            alt="baguette" 
+                            class="contact__picture"
+                        >
                     </div>
-                    <div id="contacts">
-                        <p>
+                    <div id="contacts" class="contact__content">
+                        <p class="contact__subtitle">
                             Get in Touch
                         </p>
-                        <h2>
+                        <h2 class="contact__title">
                             Contact With Us
                         </h2>
-                        <div>
-                            <div>
-                                <img 
+                        <div class="contact__cards">
+                            <div class="contact__card-item">
+                                <button type="button" class="contact__icon">
+                                    <img 
                                     src="./images/svg/icon-location.svg" 
                                     alt="icon"
                                 >
-                                <div>
-                                    <p>
+                                </button>
+                                <div class="contact__information">
+                                    <p class="contact__number">
                                         01
                                     </p>
-                                    <p>
+                                    <p class="contact__name"> 
                                         Address
                                     </p>
-                                    <p>
+                                    <p class="contact__address">
                                         764 Richardson Rd.Bethpage, NY 11714
                                     </p>
                                 </div>
                             </div>
-                            <div>
-                                <img 
+                            <div class="contact__card-item">
+                                <button type="button" class="contact__icon">
+                                    <img 
                                     src="./images/svg/icon-phone.svg" 
                                     alt="icon"
                                 >
-                                <div>
-                                    <p>
+                                </button>
+                                <div class="contact__information">
+                                    <p class="contact__number">
                                         02
                                     </p>
-                                    <p>
+                                    <p class="contact__name">
                                         Phone
                                     </p>
-                                <a href="tel:++1(234)5678902">
-                                    +1 (234) 567-89-02
-                                </a>
+                                    <a 
+                                        href="tel:++1(234)5678902" 
+                                        class="contact__tel"
+                                    >
+                                        +1 (234) 567-89-02
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <a href="">
+                        <a href="" class="button button--light contact__button">
                             Contact Us
                         </a>
                     </div>
+                    <div class="contact__figure"></div>
+                    <div class="contact__line"></div>
+                    <div class="contact__dots"></div>
                 </div>
             </div>
         </section>
