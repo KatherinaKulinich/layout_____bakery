@@ -6,6 +6,7 @@
     text-transform: uppercase;
     @include paddingXY(42px, 12px);
     border-radius: 2px;
+    display: block;
 
     &--dark {
         @include text-button(#FFFFFF);

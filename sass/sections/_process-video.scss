@@ -14,11 +14,6 @@
         transform: translate(-50%, -50%);
     }
 
-    // &__poster {
-    //     background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5));
-
-    // }
-
     &__name {
         display: flex;
         flex-direction: column;
@@ -51,5 +46,10 @@
         &:hover path {
             fill: #FFFFFF;
         }
+    }
+
+    &__poster {
+        height: 480px;
+        width: 100%;
     }
 }

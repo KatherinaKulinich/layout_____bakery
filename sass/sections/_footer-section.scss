@@ -1,0 +1,107 @@
+@use '../variables' as *;
+@use '../mixins' as *;
+
+.footer-section {
+    @include paddingYY(57px, 37px);
+    position: relative;
+    overflow: hidden;
+
+    &__info-part {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 70px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    &__logo {
+        @include font($ff-ultra, 40px, 48px);
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #FFFFFF;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        gap: 23px;
+    }
+
+    &__name-column {
+        @include sub-title(#FFFFFF);
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    &__item {
+        @include description-text(#FFFFFF);
+        text-decoration: none;
+
+        &:hover {
+            color: $hover-color;
+        }
+    }
+
+    &__icon-list {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        text-decoration: none;
+        background-color: $hover-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: rgba(245, 174, 92, 0.9);
+        }
+    }
+
+    &__copyright-part {
+        padding-top: 45px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__copyright-text {
+        @include description-text(rgba(255, 255, 255, 0.5));
+        @include marginY0;
+    }
+
+    &__list-policy {
+        display: flex;
+        gap: 90px;
+    }
+
+    &__dots {
+        @include image ('../images/background/light-dots.png');
+        position: absolute;
+        width: 154px;
+        height: 134px;
+        z-index: 20;
+        right: 200px;
+        top: -80px;
+    }
+
+    &__line {
+        @include image ('../images/background/abstract-light.png');
+        position: absolute;
+        width: 278px;
+        height: 211px;
+        z-index: 20;
+        left: 350px;
+        bottom:  -160px;
+    }
+}
