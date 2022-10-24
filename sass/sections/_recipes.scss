@@ -139,16 +139,7 @@
         width: 278px;
         height: 211px;
         z-index: 20;
-
-        &--01 {
-            bottom: 150px;
-            right: -120px;
-            transform: rotate();
-        }
-
-        &--02 {
-            top: 260px;
-            left: -100px;
-        }
+        bottom: -140px;
+        left: 80px;
     }
 }
