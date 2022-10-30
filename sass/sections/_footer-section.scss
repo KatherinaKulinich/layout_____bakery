@@ -8,9 +8,18 @@
 
     &__info-part {
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
         padding-bottom: 70px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        z-index: 20;
+    }
+
+    &__menu {
+        display: flex;
+        gap: 100px;
     }
 
     &__logo {
@@ -72,17 +81,22 @@
     &__copyright-part {
         padding-top: 45px;
         display: flex;
-        justify-content: space-between;
+        // justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
     }
 
     &__copyright-text {
         @include description-text(rgba(255, 255, 255, 0.5));
         @include marginY0;
+        z-index: 30;
     }
 
     &__list-policy {
         display: flex;
-        gap: 90px;
+        gap: 20px;
+        z-index: 30;
+        flex-direction: column;
     }
 
     &__dots {
@@ -96,12 +110,55 @@
     }
 
     &__line {
-        @include image ('../images/background/abstract-light.png');
-        position: absolute;
-        width: 278px;
-        height: 211px;
-        z-index: 20;
-        left: 350px;
-        bottom:  -160px;
+        display: none;
     }
+}
+
+@media (min-width: 768px){
+    .footer-section {
+        &__menu {
+            display: flex;
+            gap: 100px;
+        }
+
+        &__info-part {
+            flex-direction: row;
+            gap: 0;
+            justify-content: space-between;
+        }
+
+        &__line {
+            display: block;
+            @include image ('../images/background/abstract-light.png');
+            position: absolute;
+            width: 278px;
+            height: 211px;
+            z-index: 20;
+            left: 350px;
+            bottom:  -160px;
+        }
+
+        &__copyright-part {
+            flex-direction: row;
+            gap: 0;
+            justify-content: space-between;
+        }
+
+        &__list-policy {
+            flex-direction: row;
+            gap: 90px;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .footer-section {
+        &__menu {
+            gap: 200px;
+        }
+    }
+}
+
+@media (min-width: 1440px){
+
 }

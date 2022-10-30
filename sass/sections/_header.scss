@@ -3,22 +3,21 @@
 
 .header {
     @include paddingYY(16px, 25px);
-    
-    &__section {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
 
     &__menu {
         display: flex;
-        gap: 72px;
-        align-items: center;
+        flex-direction: column;
+        gap: 20px; 
     }
 
     &__navigation {
         display: flex;
-        gap: 60px;
+        flex-direction: column;
+        gap: 10px;
     }
 
     &__nav-item {
@@ -32,3 +31,27 @@
         }
     }
 }
+
+
+
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        
+        &__menu {
+            flex-direction: row;
+            gap: 72px;
+            align-items: center;
+        }
+
+        &__navigation {
+            gap: 60px;
+            flex-direction: row;
+        }
+    } 
+}
+
+
+

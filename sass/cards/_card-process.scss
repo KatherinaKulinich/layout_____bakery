@@ -15,6 +15,7 @@
         display: block;
     }
 
+        
     &__numb {
         @include sub-title;
         margin-bottom: 96px;
@@ -28,8 +29,7 @@
 
     &__description {
         @include description-text;
-        margin-top: 0;
-        margin-bottom: 0;
+        @include marginY0;
     }
 
     &__hover-img {
@@ -42,4 +42,17 @@
         right: -14px;
         display: none;
     }
+}
+
+
+@media (min-width: 768px){
+    .card-process {
+        &__content {
+            // width: 250px;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+
 }

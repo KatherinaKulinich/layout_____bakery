@@ -2,10 +2,12 @@
 @use '../mixins' as *;
 
 .bakers {
-    @include paddingYY(192px, 133px);
+    @include paddingYY(100px, 50px);
     display: flex;
-    justify-content: space-between;
-    position: relative;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: left;
+    
 
     &__content {
         width: 50%;
@@ -17,44 +19,111 @@
     }
 
     &__title {
-        @include title;
-        margin-bottom: 70px;
+        @include font ($ff-ultra, 40px, 46px);
+        color: $main-text-color;
+        margin-top: 0;
+        margin-bottom: 50px;
+        width: 100%;
     }
 
     &__picture {
         z-index: 40;
     }
 
+    &__baker-photo {
+        width: 100%;
+    }
+
     &__dots {
-        @include image ('../images/background/dark-dots-2.png');
-        width: 124px;
-        height: 104px;
-        transform: rotate(-45deg);
-        position: absolute;
-        z-index: 30;
-        top: 430px;
-        right: 450px
+       display: none;
     }
 
     &__figure {
-        @include image ('../images/background/fill-abstract.png');
-        width: 482px;
-        height: 489px;
-        transform: rotate(-105deg);
-        position: absolute;
-        z-index: 20;
-        bottom: 80px;
-        right: 20px;
+        display: none;
     }
 
     &__line {
-        @include image ('../images/background/abstract-light.png');
-        width: 278px;
-        height: 211px;
-        position: absolute;
-        z-index: 20;
-        top: 130px;
-        right: 0;
+        display: none;
     }
+}
+
+
+@media (min-width: 768px){
+    .bakers {
+        @include paddingYY(160px, 100px);
+
+        &__title {
+            @include title;
+            margin-bottom: 70px;
+        }
+
+        &__baker-photo {
+            width: 500px;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .bakers {
+        @include paddingYY(192px, 133px);
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-between;
+        position: relative;
+
+        &__picture {
+            width: 50%;
+        }
+
+        &__content {
+            width: 50%;
+        }
+
+        
+    }
+}
+
+@media (min-width: 1240px){
+    .bakers {
+        
+        &__dots {
+            display: block;
+            @include image ('../images/background/dark-dots-2.png');
+            width: 124px;
+            height: 104px;
+            transform: rotate(-45deg);
+            position: absolute;
+            z-index: 30;
+            top: 430px;
+            right: 450px
+        }
+    
+        &__figure {
+            display: block;
+            @include image ('../images/background/fill-abstract.png');
+            width: 482px;
+            height: 489px;
+            transform: rotate(-105deg);
+            position: absolute;
+            z-index: 20;
+            bottom: 80px;
+            right: 20px;
+        }
+    
+        &__line {
+            display: block;
+            @include image ('../images/background/abstract-light.png');
+            width: 278px;
+            height: 211px;
+            position: absolute;
+            z-index: 20;
+            top: 130px;
+            right: 0;
+        }
+    }
+}
+
+
+@media (min-width: 1440px){
 
 }

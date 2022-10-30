@@ -2,7 +2,7 @@
 @use '../mixins' as *;
 
 .features-card {
-    padding: 56px 30px 48px 64px;
+    padding: 46px 20px 38px 44px;
     position: relative;
     overflow: hidden;
 
@@ -19,22 +19,21 @@
     }
 
     &__icon {
-        margin-bottom: 55px;
+        margin-bottom: 45px;
     }
 
     &__title {
-        @include font($ff-ultra, 40px, 48px);
+        @include font($ff-ultra, 34px, 40px);
         color: $main-text-color;
         margin-top: 0;
-        margin-bottom: 18px;
+        margin-bottom: 15px;
     }
 
     &__description {
         @include font($ff-sans, 16px, 32px);
         color: rgba(51, 51, 51, 0.5);
-        margin-top: 0;
-        margin-bottom: 0;
-        width: 306px;
+        @include marginY0;
+        width: 240px;
     }
 
     &__hover-img {
@@ -47,4 +46,28 @@
         top: -30px;
         display: none;
     }
+}
+
+@media (min-width: 768px){
+    .features-card {
+        padding: 56px 30px 48px 64px;
+
+        &__icon {
+            margin-bottom: 55px;
+        }
+
+        &__title {
+            font-size: 40px;
+            line-height: 48px;
+            margin-bottom: 18px;
+        }
+
+        &__description {
+            width: 306px;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+
 }

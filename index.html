@@ -10,9 +10,9 @@
     <title>Bakery</title>
 </head>
 <body class="body">
-    <header class="body__header header">
+    <header class="body__header">
         <div class="wrapper wrapper--secondary">
-            <div class="header__section">
+            <div class="header">
                 <div class="header__menu">
                     <a href="" class="logo logo--dark">
                         bkr
@@ -134,7 +134,7 @@
             </div>
         </section>
         <section class="body__features-section">
-            <div class="wrapper wrapper--main">
+            <div class="wrapper wrapper--secondary">
                 <div class="features">
                     <p class="features__subtitle">
                         Our Features
@@ -214,11 +214,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="process-video">
+                <!-- <div class="process-video">
                     <video  
                         poster="./images/poster2.jpg" 
-                        width="" 
-                        height="" 
                         class="process-video__poster"
                     >
                         <source src="./images/video.mp4" type="video/mp4">
@@ -246,10 +244,10 @@
                             </h3>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
-        <section class="boy__products">
+        <section class="body__products">
             <div class="wrapper wrapper--secondary">
                 <div 
                     id="products" 
@@ -365,52 +363,60 @@
                     </h2>
                     <div class="process__cards">
                         <div class="process__card-item card-process">
-                            <p class="card-process__numb">
-                                01
-                            </p>
-                            <h4 class="card-process__name">
-                                Contact
-                            </h4>
-                            <p class="card-process__description">
-                                Nothing the copy said could convince her and so it didn’t take long.
-                            </p>
-                            <div class="card-process__hover-img"></div>
+                            <div class="card-process__content">
+                                <p class="card-process__numb">
+                                    01
+                                </p>
+                                <h4 class="card-process__name">
+                                    Contact
+                                </h4>
+                                <p class="card-process__description">
+                                    Nothing the copy said could convince her and so it didn’t take long.
+                                </p>
+                                <div class="card-process__hover-img"></div>
+                            </div>
                         </div>
                         <div class="process__card-item card-process"> 
-                            <p class="card-process__numb">
-                                02
-                            </p>
-                            <h4 class="card-process__name">
-                                Baking
-                            </h4>
-                            <p class="card-process__description">
-                                The copy said could convince her and so it didn’t take long.
-                            </p>
-                            <div class="card-process__hover-img"></div>
+                            <div class="card-process__content">
+                                <p class="card-process__numb">
+                                    02
+                                </p>
+                                <h4 class="card-process__name">
+                                    Baking
+                                </h4>
+                                <p class="card-process__description">
+                                    The copy said could convince her and so it didn’t take long.
+                                </p>
+                                <div class="card-process__hover-img"></div>
+                            </div>
                         </div>
                         <div class="process__card-item card-process">
-                            <p class="card-process__numb">
-                                03
-                            </p>
-                            <h4 class="card-process__name">
-                                Delivery
-                            </h4>
-                            <p class="card-process__description">
-                                Nothing the copy said could convince her and so it didn’t take.
-                            </p>
-                            <div class="card-process__hover-img"></div>
+                            <div class="card-process__content">
+                                <p class="card-process__numb">
+                                    03
+                                </p>
+                                <h4 class="card-process__name">
+                                    Delivery
+                                </h4>
+                                <p class="card-process__description">
+                                    Nothing the copy said could convince her and so it didn’t take.
+                                </p>
+                                <div class="card-process__hover-img"></div>
+                            </div>
                         </div>
                         <div class="process__card-item card-process">
-                            <p class="card-process__numb">
-                                04
-                            </p>
-                            <h4 class="card-process__name">
-                                Tasty
-                            </h4>
-                            <p class="card-process__description">
-                                Copy said could convince her and so it didn’t take long.
-                            </p>
-                            <div class="card-process__hover-img"></div>
+                            <div class="card-process__content">
+                                <p class="card-process__numb">
+                                    04
+                                </p>
+                                <h4 class="card-process__name">
+                                    Tasty
+                                </h4>
+                                <p class="card-process__description">
+                                    Copy said could convince her and so it didn’t take long.
+                                </p>
+                                <div class="card-process__hover-img"></div>
+                            </div>
                         </div>
                     </div>
                     <div class="process__dots"></div>
@@ -963,12 +969,14 @@
                                     >
                                         +1 (234) 566-82-02                                       
                                     </a>
+                                    <br>
                                     <a 
                                         href="tel:+1(234)5678902" 
                                         class="contact__tel"
                                     >
                                         +1 (234) 567-89-02                                       
                                     </a>
+                                    <br>
                                     <a 
                                         href="tel:+1(234)5678902" 
                                         class="contact__tel"
@@ -996,66 +1004,68 @@
                     <a href="" class="footer-section__logo">
                         bkr
                     </a>
-                    <div class="footer-section__column">
-                        <p class="footer-section__name-column">
-                            Menu
-                        </p>
-                        <div class="footer-section__list">
-                            <a 
-                                href="#about-us" 
-                                class="footer-section__item"
-                            >
-                                About
-                            </a>
-                            <a 
-                                href="#products"
-                                class="footer-section__item"
-                            >
-                                Product
-                            </a>
-                            <a 
-                                href="#recipes"
-                                class="footer-section__item"
-                            >
-                                Recipes
-                            </a>
-                            <a 
-                                href="#contacts"
-                                class="footer-section__item"
-                            >
-                                Contact
-                            </a>
+                    <div class="footer-section__menu">
+                        <div class="footer-section__column">
+                            <p class="footer-section__name-column">
+                                Menu
+                            </p>
+                            <div class="footer-section__list">
+                                <a 
+                                    href="#about-us" 
+                                    class="footer-section__item"
+                                >
+                                    About
+                                </a>
+                                <a 
+                                    href="#products"
+                                    class="footer-section__item"
+                                >
+                                    Product
+                                </a>
+                                <a 
+                                    href="#recipes"
+                                    class="footer-section__item"
+                                >
+                                    Recipes
+                                </a>
+                                <a 
+                                    href="#contacts"
+                                    class="footer-section__item"
+                                >
+                                    Contact
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="footer-section__column">
-                        <p class="footer-section__name-column">
-                            Service
-                        </p>
-                        <div class="footer-section__list">
-                            <a 
-                                href="" 
-                                class="footer-section__item"
-                            >
-                                Bakery
-                            </a>
-                            <a 
-                                href="" 
-                                class="footer-section__item"
-                            >
-                                Delivery
-                            </a>
-                            <a 
-                                href=""
-                                class="footer-section__item"
-                            >
-                                Catering
-                            </a>
-                            <a 
-                                href=""
-                                class="footer-section__item"
-                            >
-                                Corporate
-                            </a>
+                        <div class="footer-section__column">
+                            <p class="footer-section__name-column">
+                                Service
+                            </p>
+                            <div class="footer-section__list">
+                                <a 
+                                    href="" 
+                                    class="footer-section__item"
+                                >
+                                    Bakery
+                                </a>
+                                <a 
+                                    href="" 
+                                    class="footer-section__item"
+                                >
+                                    Delivery
+                                </a>
+                                <a 
+                                    href=""
+                                    class="footer-section__item"
+                                >
+                                    Catering
+                                </a>
+                                <a 
+                                    href=""
+                                    class="footer-section__item"
+                                >
+                                    Corporate
+                                </a>
+                            </div>
                         </div>
                     </div>
                     <div class="footer-section__column">

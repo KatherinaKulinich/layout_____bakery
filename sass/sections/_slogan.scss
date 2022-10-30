@@ -3,12 +3,13 @@
 
 .slogan {
     display: flex;
+    flex-direction: column;
 
     &__card {
-        // padding: 160px 120px 241px 135px;
-        padding-top: 160px;
-        padding-bottom: 240px;
-        width: 50%;
+        // padding-top: 90px;
+        // padding-bottom: 100px;
+        padding: 90px 60px 100px 60px;
+        width: 100%;
         background-color: rgba(231, 212, 190, 0.44);
         display: flex;
         justify-content: center;
@@ -19,13 +20,14 @@
         display: flex;
         flex-direction: column;
         gap: 24px;
-        width: 470px;
+        width: 300px;
+        z-index: 50;
     }
 
     &__picture {
         @include image('../images/people/cooker-1.jpg');
-        width: 50%;
-        height: 790px;
+        width: 100%;
+        height: 450px;
     }
 
     &__subtitle {
@@ -33,10 +35,9 @@
     }
 
     &__title {
-        @include font($ff-ultra, 72px, 80px);
+        @include font($ff-ultra, 60px, 65px);
         color: #000000;
         @include marginY0;
-        position: relative;
     }
 
     &__description {
@@ -51,16 +52,60 @@
         height: 276px;
         position: absolute;
         z-index: 10;
-        // transform: rotate(30deg);
     }
 
     &__dots {
-        @include image('../images/background/dark-dots-2.png');
-        width: 65px;
-        height: 56px;
-        position: absolute;
-        z-index: 10;
-        top: 190px;
-        right: 210px;
+        display: none;
     }
 }
+
+
+
+@media (min-width: 768px){
+    .slogan {
+        &__card {
+            padding-top: 140px;
+            padding-bottom: 140px;
+        }
+
+        &__info {
+            width: 470px;
+        }
+
+        &__title {
+            font-size: 72px;
+            line-height: 80px;
+        }
+
+        &__picture {
+            height: 790px;
+        } 
+    }
+}
+
+@media (min-width: 1024px){
+    .slogan {
+        flex-direction: row;
+
+        &__card {
+            width: 50%;
+        }
+
+        &__picture {
+            width: 50%;
+        } 
+
+        &__dots {
+            @include image('../images/background/dark-dots-2.png');
+            width: 65px;
+            height: 56px;
+            position: absolute;
+            z-index: 10;
+            top: 190px;
+            right: 210px;
+        }
+    }
+}
+
+
+

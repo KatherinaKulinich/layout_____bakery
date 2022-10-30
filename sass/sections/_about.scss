@@ -2,77 +2,61 @@
 @use '../mixins' as *;
 
 .about {
-    @include paddingYY(160px, 120px);
+    @include paddingYY(90px, 60px);
     display: flex;
+    flex-direction: column-reverse;
+    gap: 30px;
 
     &__illustration {
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        position: relative;
     }
 
     &__information {
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: center;
         flex-direction: column;
-        gap: 60px;
+        align-items: center;
+        gap: 40px;
     }
 
     &__main-picture {
-        width: 400px;
-        height: 400px;
+        width: 300px;
+        height: 300px;
         z-index: 50;
         border-radius: 10px;
     }
 
     &__sub-picture {
-        width: 370px;
-        height: 304px;
-        position: absolute;
-        top: -40px;
-        left: 100px;
-        z-index: 30;
+        display: none;
+        // width: 270px;
+        // height: 204px;
+        // position: absolute;
+        // top: 70px;
+        // left: 130px;
+        // z-index: 30;
     }
 
     &__dots1 {
-        @include image('../images/background/dark-dots-1.png');
-        width: 154px;
-        height: 134px;
-        position: absolute;
-        top: 50px;
-        right: 90px;
-        transform: rotate(30deg);
-        z-index: 20;
+        display: none;
     }
 
     &__dots2 {
-        @include image('../images/background/dark-dots-2.png');
-        width: 100px;
-        height: 88px;
-        position: absolute;
-        bottom: 220px;
-        left: 60px;
-        transform: rotate(180deg);
-        z-index: 20;
+        display: none;
     }
 
     &__figure {
-        @include image('../images/background/fill-abstract.png');
-        width: 495px;
-        height: 499px;
-        position: absolute;
-        z-index: 10;
-        top: 90px;
+        display: none;
     }
 
     &__text {
         display: flex;
         flex-direction: column;
-        gap: 18px;
-        width: 570px;
+        gap: 13px;
+        width: 350px;
     }
 
     &__subtitle {
@@ -80,6 +64,97 @@
     }
 
     &__title {
-        @include title;
+        @include font($ff-ultra, 46px, 50px);
+        color: $main-text-color;
+        @include marginY0;
     }
+}
+
+
+@media (min-width: 768px){
+    .about {
+        @include paddingYY(130px, 100px);
+
+        &__main-picture {
+            width: 450px;
+            height: 450px;
+        }
+
+        &__title {
+            @include title;
+        }
+
+        &__text {
+            gap: 18px;
+            width: 570px;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .about {
+        flex-direction: row;
+        @include paddingYY(160px, 120px);
+
+        &__illustration {
+            width: 50%;
+            position: relative;
+        }
+
+        &__information {
+            width: 50%;
+            gap: 60px;
+            align-items: flex-end;
+        }
+
+        &__sub-picture {
+            display: block;
+            width: 370px;
+            height: 304px;
+            top: -40px;
+            left: 100px;
+        }
+
+        &__dots1 {
+            display: block;
+            @include image('../images/background/dark-dots-1.png');
+            width: 154px;
+            height: 134px;
+            position: absolute;
+            top: 50px;
+            right: 90px;
+            transform: rotate(30deg);
+            z-index: 20;
+        }
+    
+        &__dots2 {
+            display: block;
+            @include image('../images/background/dark-dots-2.png');
+            width: 100px;
+            height: 88px;
+            position: absolute;
+            bottom: 220px;
+            left: 60px;
+            transform: rotate(180deg);
+            z-index: 20;
+        }
+    
+        &__figure {
+            display: block;
+            @include image('../images/background/fill-abstract.png');
+            width: 495px;
+            height: 499px;
+            position: absolute;
+            z-index: 10;
+            top: 90px;
+        }
+    }
+}
+
+@media (min-width: 1440px){
+
+}
+
+@media (min-width: 1920px){
+    
 }

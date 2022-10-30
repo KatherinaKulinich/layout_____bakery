@@ -2,7 +2,7 @@
 @use '../mixins' as *;
 
 .feedback {
-    @include paddingYY(100px, 113px);
+    @include paddingYY(55px, 75px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,17 +14,38 @@
     }
 
     &__title {
-        @include title;
-        margin-bottom: 70px;
-        width: 617px;
+        @include font ($ff-ultra, 42px, 46px);
+        color: $main-text-color;
+        margin-top: 0;
+        margin-bottom: 50px;
+        width: 100%;
     }
 
     &__cards {
         display: flex;
         margin-bottom: 64px;
+        overflow-x: auto;
     }
 
     &__card-item {
         width: 33.33%;
+    }
+}
+
+@media (min-width: 768px){
+    .feedback {
+        @include paddingYY(80px, 95px);
+
+        &__title {
+            @include title;
+            margin-bottom: 70px;
+            width: 617px;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .feedback {
+        @include paddingYY(100px, 113px);
     }
 }

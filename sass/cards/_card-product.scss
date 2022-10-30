@@ -56,3 +56,26 @@
         margin-bottom: 0;
     }
 }
+
+
+@media (min-width: 768px){
+    .card-product {
+        width: 350px;
+
+        &__picture {
+            width: 350px;
+            height: 284px;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .card-product {
+        width: 370px;
+
+        &__picture {
+            width: 370px;
+            height: 304px;
+        }
+    }
+}
