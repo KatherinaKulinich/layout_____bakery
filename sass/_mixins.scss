@@ -9,6 +9,15 @@
     @include marginY0();
 }
 
+@mixin title-mobile($col: $main-text-color) {
+    font-family: 'Ultra', serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 48px;
+    color: $col;
+    @include marginY0();
+}
+
 @mixin sub-title($col: $main-text-color) {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
@@ -57,10 +66,9 @@
     background-color: $col;
 }
 
-@mixin wrapper($width) {
-    margin-left: auto;
-    margin-right: auto;
-    width: $width;
+@mixin wrapper($margin) {
+    margin-left: $margin;
+    margin-right: $margin;
 }
 
 @mixin paddingX($x) {

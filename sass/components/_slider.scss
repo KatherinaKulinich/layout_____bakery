@@ -5,6 +5,8 @@
     display: flex;
     gap: 40px;
     width: 100%;
+    gap: 52px;
+    justify-content: center;
 
     &__switch {
         display: flex;
@@ -25,10 +27,6 @@
         }
     }
 
-    // &__content {
-    //     width: 100%;
-    // }
-
     &__number {
         @include sub-title;
         margin-bottom: 12px;
@@ -45,7 +43,7 @@
         @include description-text(rgba(51, 51, 51, 0.5));
         margin-bottom: 35px;
         margin-top: 0;
-        width: 230px;
+        max-width: 400px;
     }
 
     &__next {
@@ -61,13 +59,15 @@
     }
 }
 
-@media (min-width: 768px){
-    .slider {
-        gap: 52px;
 
+
+@media (min-width: 1024px){
+    .slider {
+        justify-content: flex-start;
+        
         &__description {
             width: 340px;
+            max-width: none;
         }
-    
     }
 }

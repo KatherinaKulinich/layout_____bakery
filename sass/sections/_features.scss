@@ -3,10 +3,6 @@
 
 .features {
     @include paddingYY(50px, 50px);
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    overflow-x: scroll;
 
     &__subtitle {
         @include sub-title;
@@ -14,10 +10,8 @@
     }
 
     &__title {
-        @include font ($ff-ultra, 42px, 48px);
-        margin-top: 0;
+        @include title-mobile;
         margin-bottom: 50px;
-        width: 290px;
     }
 
     &__cards {
@@ -25,12 +19,15 @@
         flex-direction: column;
         align-items: center;
     }
+
+    &__card-item {
+        max-width: 400px;
+    }
 }
 
 @media (min-width: 768px){
     .features {
         @include paddingYY(80px, 80px);
-        align-items: center;
         text-align: center;
 
         &__title {
@@ -42,10 +39,13 @@
         &__cards {
             display: flex;
             flex-direction: row;
-            padding: 0 40px;
-            white-space: nowrap;
+            justify-content:  center;
             overflow-x: auto;
-            overflow: hidden;
+        }
+
+        &__card-item {
+            min-width: 320px;
+            height: 425px;
         }
     }
 }
@@ -53,5 +53,9 @@
 @media (min-width: 1024px){
     .features {
         @include paddingYY(100px, 100px);
+
+        &__card-item {
+            width: 33.33%;
+        }
     }
 }

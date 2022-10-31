@@ -6,18 +6,17 @@
     display: flex;
     flex-direction: column-reverse;
     gap: 30px;
+    align-items: center;
 
     &__illustration {
         width: 100%;
         display: flex;
         justify-content: center;
-        align-items: flex-end;
     }
 
     &__information {
         width: 100%;
         display: flex;
-        justify-content: center;
         flex-direction: column;
         align-items: center;
         gap: 40px;
@@ -26,28 +25,13 @@
     &__main-picture {
         width: 300px;
         height: 300px;
-        z-index: 50;
+        z-index: 30;
         border-radius: 10px;
     }
 
-    &__sub-picture {
-        display: none;
-        // width: 270px;
-        // height: 204px;
-        // position: absolute;
-        // top: 70px;
-        // left: 130px;
-        // z-index: 30;
-    }
-
-    &__dots1 {
-        display: none;
-    }
-
-    &__dots2 {
-        display: none;
-    }
-
+    &__sub-picture,
+    &__dots1,
+    &__dots2,
     &__figure {
         display: none;
     }
@@ -56,7 +40,7 @@
         display: flex;
         flex-direction: column;
         gap: 13px;
-        width: 350px;
+        max-width: 460px
     }
 
     &__subtitle {
@@ -64,14 +48,12 @@
     }
 
     &__title {
-        @include font($ff-ultra, 46px, 50px);
-        color: $main-text-color;
-        @include marginY0;
+        @include title-mobile;
     }
 }
 
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .about {
         @include paddingYY(130px, 100px);
 
@@ -86,7 +68,66 @@
 
         &__text {
             gap: 18px;
-            width: 570px;
+            max-width: 570px;
+        }
+
+        &__illustration {
+            position: relative;
+            height: 705px;
+            max-width: 770px;
+        }
+
+        &__main-picture {
+            z-index: 40;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &__sub-picture {
+            display: block;
+            width: 370px;
+            height: 304px;
+            top: 20px;
+            left: 70px;
+            z-index: 30;
+            position: absolute;
+        }
+
+        &__dots1 {
+            display: block;
+            position: absolute;
+            z-index: 20;
+            @include image('../images/background/dark-dots-1.png');
+            width: 154px;
+            height: 134px;
+            top: 50px;
+            right: 90px;
+            transform: rotate(30deg);
+        }
+    
+        &__dots2 {
+            display: block;
+            position: absolute;
+            z-index: 20;
+            @include image('../images/background/dark-dots-2.png');
+            width: 100px;
+            height: 88px;
+            bottom: 220px;
+            left: 20px;
+            transform: rotate(180deg);
+        }
+    
+        &__figure {
+            display: block;
+            position: absolute;
+            z-index: 10;
+            @include image('../images/background/fill-abstract.png');
+            width: 550px;
+            height: 550px;
+            top: 90px;
+            right: 130px;
         }
     }
 }
@@ -98,63 +139,83 @@
 
         &__illustration {
             width: 50%;
-            position: relative;
         }
 
         &__information {
             width: 50%;
             gap: 60px;
-            align-items: flex-end;
+            align-items: flex-start;
+        } 
+
+        &__main-picture {
+            width: 350px;
+            height: 350px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         &__sub-picture {
-            display: block;
-            width: 370px;
-            height: 304px;
-            top: -40px;
-            left: 100px;
+            width: 270px;
+            height: 204px;
+            top: 200px;
+            left: 30px;
         }
 
         &__dots1 {
-            display: block;
-            @include image('../images/background/dark-dots-1.png');
-            width: 154px;
-            height: 134px;
-            position: absolute;
-            top: 50px;
+            top: 150px;
             right: 90px;
-            transform: rotate(30deg);
-            z-index: 20;
         }
     
         &__dots2 {
-            display: block;
-            @include image('../images/background/dark-dots-2.png');
-            width: 100px;
-            height: 88px;
-            position: absolute;
-            bottom: 220px;
-            left: 60px;
-            transform: rotate(180deg);
-            z-index: 20;
+            bottom: 200px;
+            left: 10px;
         }
     
         &__figure {
-            display: block;
-            @include image('../images/background/fill-abstract.png');
-            width: 495px;
-            height: 499px;
-            position: absolute;
-            z-index: 10;
-            top: 90px;
+            top: 220px;
+            right: 130px;
+            width: 400px;
+            height: 400px;
         }
     }
 }
 
-@media (min-width: 1440px){
+@media (min-width: 1240px){
+    .about {
+        &__main-picture {
+            width: 450px;
+            height: 450px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-}
+        &__sub-picture {
+            width: 370px;
+            height: 304px;
+            top: 20px;
+            left: 20px;
+        }
 
-@media (min-width: 1920px){
+        &__dots1 {
+            top: 50px;
+            right: 90px;
+        }
     
+        &__dots2 {
+            bottom: 220px;
+            left: 20px;
+            transform: rotate(180deg);
+        }
+    
+        &__figure {
+            width: 550px;
+            height: 550px;
+            top: 90px;
+            right: 130px;
+        } 
+    }
 }
+
+

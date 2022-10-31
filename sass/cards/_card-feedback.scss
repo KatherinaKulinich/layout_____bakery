@@ -29,8 +29,7 @@
 
     &__description {
         @include description-text;
-        margin-top: 0;
-        margin-bottom: 0;
+        @include marginY0;
     }
 
     &:hover {

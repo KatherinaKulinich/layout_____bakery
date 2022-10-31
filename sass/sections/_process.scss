@@ -14,14 +14,14 @@
     }
 
     &__title {
-        @include title(#FFFFFF);
-        margin-bottom: 70px;
+        @include title-mobile(#FFFFFF);
+        margin-bottom: 50px;
     }
 
     &__cards {
         display: flex;
         flex-wrap: wrap;
-        align-self: center;
+        justify-content: center;
         z-index: 30;
         width: 100%;
         gap: 1px;
@@ -29,6 +29,7 @@
 
     &__card-item {
         width: 100%;
+        max-width: 355px;
     }
     
     &__dots {
@@ -44,34 +45,39 @@
     .process {
         &__card-item {
             width: calc(50% - 1px);
+            max-width: none;
+        }
+
+        &__title {
+            @include title(#FFFFFF);
+            margin-bottom: 70px;
         }
     }
 }
 
 @media (min-width: 1024px){
     .process {
-    &__cards {
-        justify-content: center;
-    }
+        &__cards {
+            justify-content: center;
+        }
 
         &__card-item {
             max-width: 450px;
-        }
-
-        
+        }  
     }
 }
 
 
 @media (min-width: 1240px) {
     .process {
-
         &__cards {
             flex-wrap: nowrap;
         }
+
         &__card-item {
             width: 25%;
         }
+        
         &__dots {
             display: block;
             @include image ('../images/background/light-dots.png');

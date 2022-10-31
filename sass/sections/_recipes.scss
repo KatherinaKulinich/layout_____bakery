@@ -22,11 +22,9 @@
     }
 
     &__title {
-        @include font($ff-ultra, 42px, 48px);
-        color: #FFFFFF;
-        margin-top: 0;
+        @include title-mobile(#FFFFFF);
         margin-bottom: 50px;
-        width: 300px;
+        max-width: 500px;
     }
 
     &__card-picture {
@@ -82,6 +80,8 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        margin-bottom: 40px;
+        z-index: 30;
     }
 
     &__dots {
@@ -126,7 +126,7 @@
         &__title {
             @include title(#FFFFFF);
             margin-bottom: 70px;
-            width: 620px;
+            max-width: 620px;
         }
 
         &__card-picture {
@@ -178,7 +178,6 @@
             color: $main-text-color;
         }
 
-
         &__cards {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -226,7 +225,6 @@
 @media (min-width: 1240px) {
     .recipes {
         @include paddingYY(80px, 160px);
-
 
         &__cards {
             display: grid;

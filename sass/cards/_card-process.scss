@@ -14,7 +14,6 @@
     &:hover .card-process__hover-img {
         display: block;
     }
-
         
     &__numb {
         @include sub-title;
@@ -45,12 +44,9 @@
 }
 
 
+
 @media (min-width: 768px){
-    .card-process {
-        &__content {
-            // width: 250px;
-        }
-    }
+
 }
 
 @media (min-width: 1024px){

@@ -5,7 +5,7 @@
 
     &__picture {
         width: 100%;
-        height: 208px;
+        height: 280px;
 
         &--01 {
             @include image ('../images/picture-10.jpg');
@@ -58,5 +58,13 @@
         @include font ($ff-sans, 20px, 32px);
         @include marginY0;
         width: 206px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card-recipe {
+        &__picture {
+            height: 208px;
+        }
     }
 }
