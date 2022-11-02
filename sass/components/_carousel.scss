@@ -16,9 +16,13 @@
         background-color: rgba(158, 173, 141, 1);
 
         &--active {
-            width: 16px;
-            height: 16px;
+            transform: scale(2);
             background-color: $main-text-color;
+        }
+
+        &:not(.carousel__button--active):hover {
+            transform: scale(1.5);
+            background-color: rgba(23, 27, 27, 0.5);
         }
     }
 }

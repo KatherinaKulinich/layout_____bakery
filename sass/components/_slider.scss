@@ -21,9 +21,12 @@
         border: none;
         border-radius: 50%;
         background-color: $main-text-color;
+        transition-property:  background-color, transform;
+        transition-duration: 0.5s;
 
         &:hover {
             background-color: rgba(51, 51, 51, 0.9);
+            transform: scale(1.1);
         }
     }
 

@@ -4,6 +4,7 @@
 .features-card {
     padding: 60px 20px 38px 44px;
     position: relative;
+    text-align: left;
 
     &:hover {
         background-color: $hover-color;
@@ -36,11 +37,11 @@
 
     &__hover-img {
         @include image ('../images/picture-3.jpg');
-        width: 120px;
-        height: 120px;
+        width: 180px;
+        height: 180px;
         border-radius: 50%;
         position: absolute;
-        right: 0px;
+        right: 0;
         top: -20px;
         display: none;
     }
@@ -58,6 +59,19 @@
             font-size: 40px;
             line-height: 48px;
             margin-bottom: 18px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .features-card {
+        transition-property: transform;
+        transition-duration: 1s;
+        transition-timing-function: ease;
+
+        &:hover {
+            transform: perspective(500px) translate3d(0, 0, 50px);
+            z-index: 10;
         }
     }
 }

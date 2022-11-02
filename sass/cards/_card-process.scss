@@ -44,11 +44,15 @@
 }
 
 
-
-@media (min-width: 768px){
-
-}
-
 @media (min-width: 1024px){
+    .card-process {
+        transition-property: background-color, transform;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-out;
 
+        &:hover {
+            transform: scale(1.2);
+            z-index: 10;
+        }
+    }
 }

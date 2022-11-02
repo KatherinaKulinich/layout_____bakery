@@ -102,6 +102,39 @@
             top: 190px;
             right: 210px;
         }
+
+        &__title {
+            animation-name: title;
+            animation-duration: 5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-delay: 1s;
+            padding-bottom: 15px;
+            border-bottom: 6px solid transparent;
+        }
+    }
+}
+
+@keyframes title {
+    0% {
+        // font-size: 66px;
+        border-color: $hover-color;
+    }
+
+    33% {
+        // font-size: 72px;
+        border-color: transparent;
+    }
+
+    67% {
+        //    font-size: 66px;
+        border-color: $hover-color;
+    }
+
+    100% {
+        // font-size: 72px;
+        border-color: transparent;
     }
 }
 

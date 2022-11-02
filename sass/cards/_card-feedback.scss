@@ -40,3 +40,14 @@
         fill: #F5D3AB;
     }
 }
+
+@media (min-width: 1024px) {
+    .card-feedback {
+        transition-property: transform, background-color;
+        transition-duration: 1s;
+
+        &:hover {
+            transform: perspective(400px) translate3d(0, 0, 20px);
+        }
+    }
+}

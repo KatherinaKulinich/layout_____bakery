@@ -3,10 +3,18 @@
 
 .process-video {
     position: relative;
+    @include image('../images/poster2.jpg');
+    height: 230px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 50px 20px;
 
     &__content {
         display: flex;
-        gap: 286px;
+        width: 100%;
+        justify-content: center;
+        gap: 40px;
         align-items: center;
         position: absolute;
         top: 50%;
@@ -18,7 +26,6 @@
         display: flex;
         flex-direction: column;
         gap: 18px;
-        width: 475px;
     }
 
     &__subtitle {
@@ -26,12 +33,15 @@
     }
 
     &__title {
-        @include title(#FFFFFF);
+        @include font($ff-ultra, 25px, 30px);
+        @include marginY0;
+        color: #FFFFFF;
+        max-width: 180px;
     }
 
     &__button {
-        width: 160px;
-        height: 160px;
+        width: 50px;
+        height: 50px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -45,6 +55,51 @@
 
         &:hover path {
             fill: #FFFFFF;
+        }
+
+        & svg {
+            width: 20px;
+            height: 26px;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .process-video {
+        height: 380px;
+
+        &__title {
+            @include title-mobile(#FFFFFF);
+            max-width: 400px;
+        }
+
+        &__button {
+            width: 90px;
+            height: 90px;
+        }
+    }
+}
+
+@media (min-width: 1024px){
+    .process-video {
+        height: 480px;
+
+        &__title {
+            @include title(#FFFFFF);
+        }
+
+        &__button {
+            width: 120px;
+            height: 120px;
+
+            & svg {
+                width: 25px;
+                height: 31px;
+            }
+        }
+
+        &__content {
+            gap: 130px;
         }
     }
 }
